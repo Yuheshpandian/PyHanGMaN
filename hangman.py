@@ -1,30 +1,35 @@
+#importing libraries that are required
 from hangman_pic import print_hangman as p_h
 from words import word_list
 import random as rd
 
+#string for verification of input
 ab="abcdefghijklmnopqrstuvwxyz"
 
 p_h=p_h()
 
+#returns a random eng word from words module
 def get_word():
     x=rd.choice(word_list)
     return x
-
+#necessary for ending the loop
 go=False
 
 word_said=[]    
 
 word=get_word() 
-
+#our word field
 pattern=["_"]*len(word)
    
     
       
 chances=0
+#Loop begins
 while True:
     print("\n HanG MaN")
     print("\n\n")
     print("tries left: "+str(7-chances)," \n")
+    #prints the hangman
     if chances>0:
         print(p_h[chances-1])
     print("word: \n"+str(pattern),"\n")
@@ -44,7 +49,7 @@ while True:
         print("\nNope,wrong one ('-')")
         chances+=1
     word_said.append(guess)   
-    
+    #declaration of win
     if "_" not in pattern and chances<=7:
         print("\n")
         print(pattern)
@@ -67,4 +72,4 @@ while True:
         elif z=="no":
             print("\nTHANK YOU")
             break
-        
+     #Thank you   

@@ -1,4 +1,6 @@
+#func return the hangman visual
 def print_hangman():
+#list contains positions of hangman
     return [
     """
                |

@@ -1,3 +1,10 @@
+'''|   |   /\    |\  |    /---      |\  /|   /\   |\  |
+   |---|  /--\   | \ |   |     __   | \/ |  /--\  | \ |   
+   |   | /    \  |  \|    \___|  |  |    | /    \ |  \|
+   
+'''
+
+
 #importing libraries that are required
 from hangman_pic import print_hangman as p_h
 from words import word_list
